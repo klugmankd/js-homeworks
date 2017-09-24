@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - grown up Homework 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="form">
+                <div class="title">homework 1</div>
+                <div class="form-group">
+                    <div class="form-input">
+                        <input type="text" class="input" name="name" onkeydown="setProperty(this, this.name, this.value)" placeholder="name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input">
+                        <select class="input" name="engine" onchange="setProperty(this, this.name, this.value)">
+                            <option selected>Change engine</option>
+                            <option value="injector">injector</option>
+                            <option value="carburetor">carburetor</option>
+                            <option value="dizel">dizel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input">
+
+                        <input type="radio" id="test1" class="color" disabled name="color" value="red" onchange="setProperty(this, this.name, this.value)">
+                        <label for="test1">red</label>
+                        <input type="radio" id="test2" class="color" disabled name="color" value="blue" onchange="setProperty(this, this.name, this.value)">
+                        <label for="test2">blue</label>
+                        <input type="radio" id="test3" class="color" disabled name="color" value="green" onchange="setProperty(this, this.name, this.value)">
+                        <label for="test3">green</label>
+                        <input type="radio" id="test4" class="color" disabled name="color" value="black" onchange="setProperty(this, this.name, this.value)">
+                        <label for="test4">black</label>
+                        <input type="radio" id="test5" class="color" disabled name="color" value="white" onchange="setProperty(this, this.name, this.value)">
+                        <label for="test5">white</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input">
+                        <label for="isColorChangeable" id="change">Изменять цвет</label>
+                        <input type="checkbox" class="input" id='isColorChangeable' name="isColorChangeable" value="false" onchange="setProperty(this, this.name, this.value)">
+                    </div>
+                </div>
+            </div>
+            <div id="car">
+                <div class="property">
+                    <div class="title">Name</div>
+                    <div id="name" class="property-value"></div>
+                </div>
+                <div class="property">
+                    <div class="title">Engine</div>
+                    <div id="engine" class="property-value"></div>
+                </div>
+                <div class="property" >
+                    <div class="title">Color</div>
+                    <div id="color" class="property-value"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

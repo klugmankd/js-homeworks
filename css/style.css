@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(133, 175, 177, 0.65);
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#main {
+    width: 46%;
+    margin-left: 25%;
+    padding: 2%;
+    display: block;
+}
+
+.form {
+    background-color: #f7f7f7;
+    width: 94%;
+    padding: 3%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 500;
+    width: 94%;
+    text-align: center;
+    padding:3%;
+    border-bottom: 3px solid silver;
+    margin-bottom: 30px;
+    color: #999;
+}
+
+.form-group {
+    display: block;
+    width: 96%;
+    padding: 2%;
+}
+
+.form-input {
+    width: 98%;
+    padding: 1%;
+}
+
+input {
+    font-size: 14px;
+}
+
+.input {
+    width: 96%;
+    padding: 2%;
+    outline: none;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #518f94;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#change {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+#isColorChangeable  {
+    display: inline-block;
+    width: 20%;
+    margin: 1%;
+    padding-left: 28px;
+    line-height: 20px;
+}
+
+#car {
+    margin-top: 40px;
+    background-color: #f7f7f7;
+    width: 94%;
+    padding: 3%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#car .property .title, .property-value {
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 94%;
+    text-align: center;
+    padding:3%;
+    border-bottom: 3px solid silver;
+    margin-bottom: 30px;
+    color: #999;
+}
+
+.property-value {
+    font-size: 1.3em;
+    border-bottom: none;
+
+}
+
