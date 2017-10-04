@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Google Maps User Location</title>
+    <link rel="stylesheet" href="css/hw-5.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header-block">
+        <div class="title">Forecast-maps</div>
+    </div>
+
+    <div class="form-block">
+        <div class="title">Form</div>
+        <div class="form-field">
+            <div class="label-block">
+                <label for="from">From</label>
+            </div>
+            <div class="input-block">
+                <input type="text" class="input" id="from" onchange="calcRoute()">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="label-block">
+                <label for="to">To</label>
+            </div>
+            <div class="input-block">
+                <input type="text" class="input" id="to" onchange="calcRoute()">
+            </div>
+        </div>
+    </div>
+
+    <div class="map-block">
+        <div class="title">Map</div>
+        <div id="map" style="height: 700px"></div>
+    </div>
+
+    <div class="forecast-block">
+        <div class="title">Forecasts</div>
+        <ul class="forecast-menu">
+            <li id='forecast-today' class="forecast-menu-item">Today</li>
+            <li id='forecast-five-days' class="forecast-menu-item">Five days</li>
+        </ul>
+        <div class="title">Weather in
+            <span id="forecast-city"></span>
+        </div>
+        <div class="forecast-result-block">
+            <div class="forecast-date"></div>
+            <ul id="forecast-result-today" class="forecast-result item-non-active">
+                <li class="forecast-result-item">
+                    <div class="time"></div>
+                    <div class="temperature"></div>
+                    <div class="weather"></div>
+                </li>
+            </ul>
+            <ul id="forecast-result-five-days" class="forecast-result item-non-active">
+                <li class="forecast-result-item">
+                    <div class="time"></div>
+                    <div class="temperature"></div>
+                    <div class="weather"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="js/hw-5.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg-2vKrJh6xYm-W1lIOZJczCzbNazuOw4&callback=initialize"></script>
+
+</body>
+</html>
