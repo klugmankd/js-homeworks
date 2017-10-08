@@ -1,16 +1,15 @@
-import {floatResult} from '../methods/floatResult';
-import {pow} from '../methods/pow';
+let pow = require('../methods/pow');
 
-export function powNumber(number, power) {
+function powNumber(number, power) {
     let result;
 
     result = {
-        'resultNumber': pow(number, power),
+        'resultNumber': pow.pow(number, power),
         'operationSign': ' ^ ',
         'operationName': 'Powering',
         'number': number,
         'power': power
     };
 
-    return floatResult(result);
+    return result;
 }

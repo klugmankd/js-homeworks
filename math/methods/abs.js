@@ -1,6 +1,4 @@
-import {floatResult} from 'floatResult';
-
-export function abs(number) {
+exports.abs = function (number) {
     let result = 0;
     if (number > 0) {
         result = number;
@@ -8,7 +6,5 @@ export function abs(number) {
         result = -1 * number;
     }
 
-    return floatResult(result);
-}
-
-console.log(abs(-3));
+    return result;
+};

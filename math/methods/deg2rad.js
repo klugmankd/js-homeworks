@@ -1,5 +1,5 @@
-import {round} from 'round';
+let round = require('../methods/round');
 
-export function deg2rad(degrees) {
-    return round(degrees * 0.0174532925);
-}
+exports.deg2rad = function(degrees) {
+    return round.round(degrees * 0.0174532925);
+};

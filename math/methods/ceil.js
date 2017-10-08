@@ -1,4 +1,4 @@
-export function ceil(number) {
+exports.ceil = function (number) {
     if (number % 1 === 0) {
         return parseInt(number);
     } else {
@@ -7,4 +7,4 @@ export function ceil(number) {
             return parseInt(number);
         }
     }
-}
+};

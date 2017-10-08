@@ -1,3 +1,3 @@
-export function floor(number) {
+exports.floor = function (number) {
     return parseInt(number);
-}
+};

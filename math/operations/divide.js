@@ -1,13 +1,12 @@
-import {floatResult} from '../methods/floatResult';
 
-export function divide(divide, divider) {
+exports.divide = function(divide, divider) {
     let result = {
-        'share': floatResult(divide / divider),
+        'share': divide / divider,
         'operationSign': ' / ',
         'operationName': 'Dividing',
         'divide': divide,
         'divider': divider
     };
 
-    return floatResult(result);
-}
+    return result;
+};

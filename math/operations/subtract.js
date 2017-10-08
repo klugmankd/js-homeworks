@@ -1,13 +1,11 @@
-import {floatResult} from '../methods/floatResult';
-
-export function subtract(reduced, negative) {
+exports.subtract = function(reduced, negative) {
     let result = {
-        'difference': floatResult(reduced - negative),
+        'difference': reduced - negative,
         'operationSign': ' - ',
         'operationName': 'Subtracting',
         'reduced': reduced,
         'negative': negative
     };
 
-    return floatResult(result);
-}
+    return result;
+};

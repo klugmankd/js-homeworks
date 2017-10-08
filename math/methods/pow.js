@@ -1,6 +1,4 @@
-import {floatResult} from 'floatResult';
-
-export function pow(number, power) {
+exports.pow = function(number, power) {
     let result = 1;
     if (power < 0) {
         power = -1 * power;
@@ -15,5 +13,5 @@ export function pow(number, power) {
             result *= number;
         }
     }
-    return floatResult(result);
-}
+    return result;
+};

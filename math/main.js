@@ -1,4 +1,13 @@
-require('operations/add');
+let operations = {
+    "adding": require('./operations/add'),
+    "subtracting": require('./operations/subtract'),
+    "multiplying": require('./operations/multiply'),
+    "dividing": require('./operations/divide'),
+    "powering": require('./operations/pow'),
+    "deg2rad": require('./operations/deg'),
+    "rad2deg": require('./operations/rad'),
+};
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -6,24 +15,18 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+let choice;
 rl.question('What operation you want to execute?', (answer) => {
-    let choice = answer.trim();
-
+    choice = parseInt(answer.trim());
     switch (choice) {
         case 1:
             let firstConjunction, secondConjunction, result;
-            rl.question('First conjunction: ', (answer) => {
-                firstConjunction = answer.trim();
-            });
-            rl.question('Second conjunction: ', (answer) => {
-                secondConjunction = answer.trim();
-            });
-            result = add(firstConjunction, secondConjunction);
+            result = operations.adding.add(firstConjunction, secondConjunction);
             console.log(`${result.firstConjunction}${result.operationSign}${result.secondConjunction}=${result.sum}`);
             break;
     }
-
-    console.log(`Thank you for your valuable feedback: ${answer}`);
-
     rl.close();
 });
+
+
+

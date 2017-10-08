@@ -1,10 +1,8 @@
-import {floatResult} from '../methods/floatResult';
-
-export function add(firstConjunction, secondConjunction) {
+exports.add = function(firstConjunction, secondConjunction) {
     let result;
 
     result = {
-        'sum': floatResult(firstConjunction + secondConjunction),
+        'sum': firstConjunction + secondConjunction,
         'operationSign': ' + ',
         'operationName': 'Adding',
         'firstConjunction': firstConjunction,
@@ -12,6 +10,4 @@ export function add(firstConjunction, secondConjunction) {
     };
 
     return result;
-}
-
-console.log(add(11, 11));
+};

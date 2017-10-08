@@ -1,13 +1,11 @@
-import {floatResult} from '../methods/floatResult';
-
-export function multiply(firstMultiplier, secondMultiplier) {
+exports.multiple = function(firstMultiplier, secondMultiplier) {
     let result = {
-        'product': floatResult(firstMultiplier * secondMultiplier),
+        'product': firstMultiplier * secondMultiplier,
         'operationSign': ' * ',
         'operationName': 'Multiplying',
         'firstMultiplier': firstMultiplier,
         'secondMultiplier': secondMultiplier
     };
 
-    return floatResult(result);
-}
+    return result;
+};

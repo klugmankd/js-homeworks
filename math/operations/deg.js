@@ -1,11 +1,11 @@
-import {rad2deg} from '../methods/rad2deg';
+let rad2deg = require('../methods/rad2deg');
 
-export function deg(radians) {
+exports.deg = function(radians) {
     let result = {
-        'share': rad2deg(radians),
+        'share': rad2deg.rad2deg(radians),
         'operationName': 'Radians to degrees',
         'radians': radians,
     };
 
     return result;
-}
+};

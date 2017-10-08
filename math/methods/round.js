@@ -1,10 +1,10 @@
-import {floor} from 'floor';
-import {ceil} from 'ceil';
+let ceil = require('./ceil.js');
+let floor = require('./floor.js');
 
-export function round(number) {
+exports.round = function (number) {
     if (number % 1 < 0.5) {
-        return floor(number)
+        return floor.floor(number)
     } else {
-        return ceil(number)
+        return ceil.ceil(number)
     }
-}
+};
